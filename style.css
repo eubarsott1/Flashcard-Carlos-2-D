@@ -1,0 +1,97 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f2f5;
+  margin: 0;
+  padding: 20px;
+}
+
+.cabecalho {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+h2 {
+  color: #2c3e50;
+}
+
+#container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.cartao {
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.geral {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.cartao.flipped .geral {
+  transform: rotateY(180deg);
+}
+
+.cartao-conteudo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  background: white;
+  backface-visibility: hidden;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.card-front {
+  color: #2c3e50;
+}
+
+.card-back {
+  background: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.design-conteudo h3 {
+  margin-top: 0;
+  font-weight: bold;
+}
+
+.cartao-conteudo-pergunta {
+  margin: 15px 0 10px;
+  font-size: 1.1rem;
+}
+
+.cartao-conteudo-resposta {
+  font-style: italic;
+  color: #555;
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+footer a {
+  color: #2980b9;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
